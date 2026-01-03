@@ -3,7 +3,7 @@ id: IDX_Template_03
 title: Index Template 03
 category: Index
 gallery:
-editedAt: 2026-01-03T13:02:28.985Z
+editedAt: 2026-01-03T13:29:32.019Z
 createdAt: 2026-01-02T07:05:33.983Z
 updatedAt: 2026-01-02T07:05:33.983Z
 ---

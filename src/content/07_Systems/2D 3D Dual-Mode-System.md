@@ -3,7 +3,7 @@ id: Systems_2d-3d-dual-mode-system
 title: 2D 3D Dual Mode System
 category: Systems
 aliases: Dual Mode System
-editedAt: 2026-01-03T13:02:29.052Z
+editedAt: 2026-01-03T13:29:32.054Z
 updatedAt: 2026-01-01T15:13:13.674Z
 createdAt: 2026-01-01T15:13:13.674Z
 ---

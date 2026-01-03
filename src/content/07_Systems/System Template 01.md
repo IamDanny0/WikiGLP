@@ -3,7 +3,7 @@ id: SYS_Template_01
 title: System Template 01
 category: Systems
 gallery:
-editedAt: 2026-01-03T13:02:29.056Z
+editedAt: 2026-01-03T13:29:32.059Z
 createdAt: 2026-01-02T07:05:34.138Z
 updatedAt: 2026-01-02T07:05:34.138Z
 ---
