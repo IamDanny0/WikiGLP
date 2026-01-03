@@ -3,7 +3,7 @@ id: SYS_Template_02
 title: System Template 02
 category: Systems
 gallery:
-editedAt: 2026-01-03T12:27:18.645Z
+editedAt: 2026-01-03T12:27:37.861Z
 createdAt: 2026-01-02T07:05:34.141Z
 updatedAt: 2026-01-02T07:05:34.141Z
 ---
