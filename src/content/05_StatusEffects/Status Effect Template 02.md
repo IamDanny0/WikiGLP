@@ -3,7 +3,7 @@ id: STA_Template_02
 title: Status Effect Template 02
 category: StatusEffects
 gallery:
-editedAt: 2026-01-03T13:44:49.669Z
+editedAt: 2026-01-03T13:52:39.342Z
 createdAt: 2026-01-02T07:05:34.101Z
 updatedAt: 2026-01-02T07:05:34.101Z
 ---

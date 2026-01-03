@@ -3,7 +3,7 @@ id: Creatures_cantoa
 title: Cantoa
 category: Creatures
 aliases: Cantoa
-editedAt: 2026-01-03T13:44:49.627Z
+editedAt: 2026-01-03T13:52:39.310Z
 updatedAt: 2026-01-01T14:32:42.049Z
 createdAt: 2026-01-01T14:32:42.049Z
 gallery:

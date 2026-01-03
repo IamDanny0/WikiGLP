@@ -3,7 +3,7 @@ id: TRT_Template_02
 title: Trait Template 02
 category: Traits
 gallery:
-editedAt: 2026-01-03T13:44:49.656Z
+editedAt: 2026-01-03T13:52:39.337Z
 createdAt: 2026-01-02T07:05:34.016Z
 updatedAt: 2026-01-02T07:05:34.016Z
 ---

@@ -23,7 +23,7 @@ Error generating stack: `+l.message+`
 id: Index_creatures-index
 title: Creatures Index
 category: Index
-editedAt: 2026-01-03T13:44:49.304Z
+editedAt: 2026-01-03T13:52:38.962Z
 updatedAt: 2026-01-01T13:49:23.822Z
 createdAt: 2026-01-01T15:38:26.644Z
 ---
@@ -36,7 +36,7 @@ createdAt: 2026-01-01T15:38:26.644Z
 id: Index_home
 title: Home
 category: Index
-editedAt: 2026-01-03T13:44:49.620Z
+editedAt: 2026-01-03T13:52:39.302Z
 updatedAt: 2026-01-01T13:49:23.819Z
 createdAt: 2026-01-01T15:38:26.965Z
 ---
@@ -52,7 +52,7 @@ id: IDX_Template_01
 title: Index Template 01
 category: Index
 gallery:
-editedAt: 2026-01-03T13:44:49.621Z
+editedAt: 2026-01-03T13:52:39.304Z
 createdAt: 2026-01-02T07:05:33.968Z
 updatedAt: 2026-01-02T07:05:33.968Z
 ---
@@ -82,7 +82,7 @@ id: IDX_Template_02
 title: Index Template 02
 category: Index
 gallery:
-editedAt: 2026-01-03T13:44:49.623Z
+editedAt: 2026-01-03T13:52:39.306Z
 createdAt: 2026-01-02T07:05:33.972Z
 updatedAt: 2026-01-02T07:05:33.972Z
 ---
@@ -112,7 +112,7 @@ id: IDX_Template_03
 title: Index Template 03
 category: Index
 gallery:
-editedAt: 2026-01-03T13:44:49.625Z
+editedAt: 2026-01-03T13:52:39.308Z
 createdAt: 2026-01-02T07:05:33.983Z
 updatedAt: 2026-01-02T07:05:33.983Z
 ---
@@ -142,7 +142,7 @@ id: Creatures_cantoa
 title: Cantoa
 category: Creatures
 aliases: Cantoa
-editedAt: 2026-01-03T13:44:49.627Z
+editedAt: 2026-01-03T13:52:39.310Z
 updatedAt: 2026-01-01T14:32:42.049Z
 createdAt: 2026-01-01T14:32:42.049Z
 gallery:
@@ -256,7 +256,7 @@ id: CRE_Template_01
 title: Creature Template 01
 category: Creatures
 gallery:
-editedAt: 2026-01-03T13:44:49.630Z
+editedAt: 2026-01-03T13:52:39.312Z
 createdAt: 2026-01-02T07:05:33.987Z
 updatedAt: 2026-01-02T07:05:33.987Z
 ---
@@ -286,7 +286,7 @@ id: CRE_Template_02
 title: Creature Template 02
 category: Creatures
 gallery:
-editedAt: 2026-01-03T13:44:49.631Z
+editedAt: 2026-01-03T13:52:39.314Z
 createdAt: 2026-01-02T07:05:33.990Z
 updatedAt: 2026-01-02T07:05:33.990Z
 ---
@@ -316,7 +316,7 @@ id: CRE_Template_03
 title: Creature Template 03
 category: Creatures
 gallery:
-editedAt: 2026-01-03T13:44:49.633Z
+editedAt: 2026-01-03T13:52:39.316Z
 createdAt: 2026-01-02T07:05:33.992Z
 updatedAt: 2026-01-02T07:05:33.992Z
 ---
@@ -346,7 +346,7 @@ id: CLS_Template_01
 title: Class Template 01
 category: Classes
 gallery:
-editedAt: 2026-01-03T13:44:49.635Z
+editedAt: 2026-01-03T13:52:39.318Z
 createdAt: 2026-01-02T07:05:33.996Z
 updatedAt: 2026-01-02T07:05:33.996Z
 ---
@@ -376,7 +376,7 @@ id: CLS_Template_02
 title: Class Template 02
 category: Classes
 gallery:
-editedAt: 2026-01-03T13:44:49.644Z
+editedAt: 2026-01-03T13:52:39.320Z
 createdAt: 2026-01-02T07:05:34.000Z
 updatedAt: 2026-01-02T07:05:34.000Z
 ---
@@ -406,7 +406,7 @@ id: CLS_Template_03
 title: Class Template 03
 category: Classes
 gallery:
-editedAt: 2026-01-03T13:44:49.647Z
+editedAt: 2026-01-03T13:52:39.328Z
 createdAt: 2026-01-02T07:05:34.003Z
 updatedAt: 2026-01-02T07:05:34.003Z
 ---
@@ -436,7 +436,7 @@ id: ABL_Template_01
 title: Ability Template 01
 category: Abilities
 gallery:
-editedAt: 2026-01-03T13:44:49.649Z
+editedAt: 2026-01-03T13:52:39.330Z
 createdAt: 2026-01-02T07:05:34.005Z
 updatedAt: 2026-01-02T07:05:34.005Z
 ---
@@ -466,7 +466,7 @@ id: ABL_Template_02
 title: Ability Template 02
 category: Abilities
 gallery:
-editedAt: 2026-01-03T13:44:49.650Z
+editedAt: 2026-01-03T13:52:39.332Z
 createdAt: 2026-01-02T07:05:34.009Z
 updatedAt: 2026-01-02T07:05:34.009Z
 ---
@@ -496,7 +496,7 @@ id: ABL_Template_03
 title: Ability Template 03
 category: Abilities
 gallery:
-editedAt: 2026-01-03T13:44:49.652Z
+editedAt: 2026-01-03T13:52:39.333Z
 createdAt: 2026-01-02T07:05:34.011Z
 updatedAt: 2026-01-02T07:05:34.011Z
 ---
@@ -526,7 +526,7 @@ id: TRT_Template_01
 title: Trait Template 01
 category: Traits
 gallery:
-editedAt: 2026-01-03T13:44:49.654Z
+editedAt: 2026-01-03T13:52:39.335Z
 createdAt: 2026-01-02T07:05:34.014Z
 updatedAt: 2026-01-02T07:05:34.014Z
 ---
@@ -556,7 +556,7 @@ id: TRT_Template_02
 title: Trait Template 02
 category: Traits
 gallery:
-editedAt: 2026-01-03T13:44:49.656Z
+editedAt: 2026-01-03T13:52:39.337Z
 createdAt: 2026-01-02T07:05:34.016Z
 updatedAt: 2026-01-02T07:05:34.016Z
 ---
@@ -586,7 +586,7 @@ id: TRT_Template_03
 title: Trait Template 03
 category: Traits
 gallery:
-editedAt: 2026-01-03T13:44:49.665Z
+editedAt: 2026-01-03T13:52:39.338Z
 createdAt: 2026-01-02T07:05:34.073Z
 updatedAt: 2026-01-02T07:05:34.073Z
 ---
@@ -616,7 +616,7 @@ id: STA_Template_01
 title: Status Effect Template 01
 category: StatusEffects
 gallery:
-editedAt: 2026-01-03T13:44:49.667Z
+editedAt: 2026-01-03T13:52:39.340Z
 createdAt: 2026-01-02T07:05:34.098Z
 updatedAt: 2026-01-02T07:05:34.098Z
 ---
@@ -646,7 +646,7 @@ id: STA_Template_02
 title: Status Effect Template 02
 category: StatusEffects
 gallery:
-editedAt: 2026-01-03T13:44:49.669Z
+editedAt: 2026-01-03T13:52:39.342Z
 createdAt: 2026-01-02T07:05:34.101Z
 updatedAt: 2026-01-02T07:05:34.101Z
 ---
@@ -676,7 +676,7 @@ id: STA_Template_03
 title: Status Effect Template 03
 category: StatusEffects
 gallery:
-editedAt: 2026-01-03T13:44:49.670Z
+editedAt: 2026-01-03T13:52:39.344Z
 createdAt: 2026-01-02T07:05:34.104Z
 updatedAt: 2026-01-02T07:05:34.104Z
 ---
@@ -706,7 +706,7 @@ id: WRL_Template_01
 title: World Template 01
 category: World
 gallery:
-editedAt: 2026-01-03T13:44:49.672Z
+editedAt: 2026-01-03T13:52:39.346Z
 createdAt: 2026-01-02T07:05:34.117Z
 updatedAt: 2026-01-02T07:05:34.117Z
 ---
@@ -736,7 +736,7 @@ id: WRL_Template_02
 title: World Template 02
 category: World
 gallery:
-editedAt: 2026-01-03T13:44:49.674Z
+editedAt: 2026-01-03T13:52:39.347Z
 createdAt: 2026-01-02T07:05:34.133Z
 updatedAt: 2026-01-02T07:05:34.133Z
 ---
@@ -766,7 +766,7 @@ id: WRL_Template_03
 title: World Template 03
 category: World
 gallery:
-editedAt: 2026-01-03T13:44:49.675Z
+editedAt: 2026-01-03T13:52:39.349Z
 createdAt: 2026-01-02T07:05:34.135Z
 updatedAt: 2026-01-02T07:05:34.135Z
 ---
@@ -796,7 +796,7 @@ id: Systems_2d-3d-dual-mode-system
 title: 2D 3D Dual Mode System
 category: Systems
 aliases: Dual Mode System
-editedAt: 2026-01-03T13:44:49.685Z
+editedAt: 2026-01-03T13:52:39.350Z
 updatedAt: 2026-01-01T15:13:13.674Z
 createdAt: 2026-01-01T15:13:13.674Z
 ---
@@ -960,7 +960,7 @@ id: Systems_element_trait_system
 title: Element Trait System
 category: Systems
 aliases: Element Traits, Element Affinity, Element Imbue System, Element System
-editedAt: 2026-01-03T13:44:49.687Z
+editedAt: 2026-01-03T13:52:39.353Z
 updatedAt: 2026-01-01T15:38:13.674Z
 createdAt: 2026-01-01T15:38:13.674Z
 ---
@@ -1234,7 +1234,7 @@ id: SYS_Template_01
 title: System Template 01
 category: Systems
 gallery:
-editedAt: 2026-01-03T13:44:49.689Z
+editedAt: 2026-01-03T13:52:39.355Z
 createdAt: 2026-01-02T07:05:34.138Z
 updatedAt: 2026-01-02T07:05:34.138Z
 ---
@@ -1264,7 +1264,7 @@ id: SYS_Template_02
 title: System Template 02
 category: Systems
 gallery:
-editedAt: 2026-01-03T13:44:49.691Z
+editedAt: 2026-01-03T13:52:39.356Z
 createdAt: 2026-01-02T07:05:34.141Z
 updatedAt: 2026-01-02T07:05:34.141Z
 ---
@@ -1294,7 +1294,7 @@ id: SYS_Template_03
 title: System Template 03
 category: Systems
 gallery:
-editedAt: 2026-01-03T13:44:49.693Z
+editedAt: 2026-01-03T13:52:39.358Z
 createdAt: 2026-01-02T07:05:34.144Z
 updatedAt: 2026-01-02T07:05:34.144Z
 ---
