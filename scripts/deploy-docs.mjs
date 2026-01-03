@@ -4,12 +4,11 @@ import { fileURLToPath } from 'node:url'
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url))
 const viewerRoot = path.resolve(scriptDir, '..')
-const repoRoot = path.resolve(viewerRoot, '..')
 const distDir = path.join(viewerRoot, 'dist')
-const docsDir = path.join(repoRoot, 'docs')
+const docsDir = path.join(viewerRoot, 'docs')
 
 if (!fs.existsSync(distDir)) {
-  console.error('dist directory is missing. Run "npm run build -- --base=/WikiGLP/" first.')
+  console.error('dist directory is missing. Run "npm run build" first.')
   process.exit(1)
 }
 
@@ -46,7 +45,7 @@ if (fs.existsSync(indexPath)) {
 fs.writeFileSync(path.join(docsDir, '.nojekyll'), '')
 console.log('Ensured .nojekyll for GitHub Pages')
 
-const rootCnamePath = path.join(repoRoot, 'CNAME')
+const rootCnamePath = path.join(viewerRoot, 'CNAME')
 const docsCnamePath = path.join(docsDir, 'CNAME')
 const envCname = process.env.DEPLOY_CNAME
 

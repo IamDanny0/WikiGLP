@@ -3,7 +3,7 @@ id: WRL_Template_03
 title: World Template 03
 category: World
 gallery:
-editedAt: 2026-01-03T13:29:32.052Z
+editedAt: 2026-01-03T13:44:49.675Z
 createdAt: 2026-01-02T07:05:34.135Z
 updatedAt: 2026-01-02T07:05:34.135Z
 ---

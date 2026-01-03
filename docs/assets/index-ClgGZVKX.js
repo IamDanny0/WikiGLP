@@ -19,11 +19,11 @@ Error generating stack: `+l.message+`
 `});++s<i.length;)s&&r.push({type:"text",value:`
 `}),r.push(i[s]);return u&&i.length>0&&r.push({type:"text",value:`
 `}),r}function Ym(i){let u=0,r=i.charCodeAt(u);for(;r===9||r===32;)u++,r=i.charCodeAt(u);return i.slice(u)}function Vm(i,u){const r=Xv(i,u),s=r.one(i,void 0),o=Bv(r),f=Array.isArray(s)?{type:"root",children:s}:s||{type:"root",children:[]};return o&&f.children.push({type:"text",value:`
-`},o),f}function Wv(i,u){return i&&"run"in i?async function(r,s){const o=Vm(r,{file:s,...u});await i.run(o,s)}:function(r,s){return Vm(r,{file:s,...i||u})}}function Qm(i){if(i)throw i}var xc,Xm;function $v(){if(Xm)return xc;Xm=1;var i=Object.prototype.hasOwnProperty,u=Object.prototype.toString,r=Object.defineProperty,s=Object.getOwnPropertyDescriptor,o=function(m){return typeof Array.isArray=="function"?Array.isArray(m):u.call(m)==="[object Array]"},f=function(m){if(!m||u.call(m)!=="[object Object]")return!1;var y=i.call(m,"constructor"),v=m.constructor&&m.constructor.prototype&&i.call(m.constructor.prototype,"isPrototypeOf");if(m.constructor&&!y&&!v)return!1;var E;for(E in m);return typeof E>"u"||i.call(m,E)},d=function(m,y){r&&y.name==="__proto__"?r(m,y.name,{enumerable:!0,configurable:!0,value:y.newValue,writable:!0}):m[y.name]=y.newValue},p=function(m,y){if(y==="__proto__")if(i.call(m,y)){if(s)return s(m,y).value}else return;return m[y]};return xc=function b(){var m,y,v,E,T,q,V=arguments[0],I=1,j=arguments.length,le=!1;for(typeof V=="boolean"&&(le=V,V=arguments[1]||{},I=2),(V==null||typeof V!="object"&&typeof V!="function")&&(V={});I<j;++I)if(m=arguments[I],m!=null)for(y in m)v=p(V,y),E=p(m,y),V!==E&&(le&&E&&(f(E)||(T=o(E)))?(T?(T=!1,q=v&&o(v)?v:[]):q=v&&f(v)?v:{},d(V,{name:y,newValue:b(le,q,E)})):typeof E<"u"&&d(V,{name:y,newValue:E}));return V},xc}var Pv=$v();const Ec=tp(Pv);function Gc(i){if(typeof i!="object"||i===null)return!1;const u=Object.getPrototypeOf(i);return(u===null||u===Object.prototype||Object.getPrototypeOf(u)===null)&&!(Symbol.toStringTag in i)&&!(Symbol.iterator in i)}function eS(){const i=[],u={run:r,use:s};return u;function r(...o){let f=-1;const d=o.pop();if(typeof d!="function")throw new TypeError("Expected function as last argument, not "+d);p(null,...o);function p(b,...m){const y=i[++f];let v=-1;if(b){d(b);return}for(;++v<o.length;)(m[v]===null||m[v]===void 0)&&(m[v]=o[v]);o=m,y?tS(y,p)(...m):d(null,...m)}}function s(o){if(typeof o!="function")throw new TypeError("Expected `middelware` to be a function, not "+o);return i.push(o),u}}function tS(i,u){let r;return s;function s(...d){const p=i.length>d.length;let b;p&&d.push(o);try{b=i.apply(this,d)}catch(m){const y=m;if(p&&r)throw y;return o(y)}p||(b&&b.then&&typeof b.then=="function"?b.then(f,o):b instanceof Error?o(b):f(b))}function o(d,...p){r||(r=!0,u(d,...p))}function f(d){o(null,d)}}const un={basename:nS,dirname:lS,extname:iS,join:aS,sep:"/"};function nS(i,u){if(u!==void 0&&typeof u!="string")throw new TypeError('"ext" argument must be a string');Sa(i);let r=0,s=-1,o=i.length,f;if(u===void 0||u.length===0||u.length>i.length){for(;o--;)if(i.codePointAt(o)===47){if(f){r=o+1;break}}else s<0&&(f=!0,s=o+1);return s<0?"":i.slice(r,s)}if(u===i)return"";let d=-1,p=u.length-1;for(;o--;)if(i.codePointAt(o)===47){if(f){r=o+1;break}}else d<0&&(f=!0,d=o+1),p>-1&&(i.codePointAt(o)===u.codePointAt(p--)?p<0&&(s=o):(p=-1,s=d));return r===s?s=d:s<0&&(s=i.length),i.slice(r,s)}function lS(i){if(Sa(i),i.length===0)return".";let u=-1,r=i.length,s;for(;--r;)if(i.codePointAt(r)===47){if(s){u=r;break}}else s||(s=!0);return u<0?i.codePointAt(0)===47?"/":".":u===1&&i.codePointAt(0)===47?"//":i.slice(0,u)}function iS(i){Sa(i);let u=i.length,r=-1,s=0,o=-1,f=0,d;for(;u--;){const p=i.codePointAt(u);if(p===47){if(d){s=u+1;break}continue}r<0&&(d=!0,r=u+1),p===46?o<0?o=u:f!==1&&(f=1):o>-1&&(f=-1)}return o<0||r<0||f===0||f===1&&o===r-1&&o===s+1?"":i.slice(o,r)}function aS(...i){let u=-1,r;for(;++u<i.length;)Sa(i[u]),i[u]&&(r=r===void 0?i[u]:r+"/"+i[u]);return r===void 0?".":uS(r)}function uS(i){Sa(i);const u=i.codePointAt(0)===47;let r=rS(i,!u);return r.length===0&&!u&&(r="."),r.length>0&&i.codePointAt(i.length-1)===47&&(r+="/"),u?"/"+r:r}function rS(i,u){let r="",s=0,o=-1,f=0,d=-1,p,b;for(;++d<=i.length;){if(d<i.length)p=i.codePointAt(d);else{if(p===47)break;p=47}if(p===47){if(!(o===d-1||f===1))if(o!==d-1&&f===2){if(r.length<2||s!==2||r.codePointAt(r.length-1)!==46||r.codePointAt(r.length-2)!==46){if(r.length>2){if(b=r.lastIndexOf("/"),b!==r.length-1){b<0?(r="",s=0):(r=r.slice(0,b),s=r.length-1-r.lastIndexOf("/")),o=d,f=0;continue}}else if(r.length>0){r="",s=0,o=d,f=0;continue}}u&&(r=r.length>0?r+"/..":"..",s=2)}else r.length>0?r+="/"+i.slice(o+1,d):r=i.slice(o+1,d),s=d-o-1;o=d,f=0}else p===46&&f>-1?f++:f=-1}return r}function Sa(i){if(typeof i!="string")throw new TypeError("Path must be a string. Received "+JSON.stringify(i))}const sS={cwd:cS};function cS(){return"/"}function Zc(i){return!!(i!==null&&typeof i=="object"&&"href"in i&&i.href&&"protocol"in i&&i.protocol&&i.auth===void 0)}function oS(i){if(typeof i=="string")i=new URL(i);else if(!Zc(i)){const u=new TypeError('The "path" argument must be of type string or an instance of URL. Received `'+i+"`");throw u.code="ERR_INVALID_ARG_TYPE",u}if(i.protocol!=="file:"){const u=new TypeError("The URL must be of scheme file");throw u.code="ERR_INVALID_URL_SCHEME",u}return fS(i)}function fS(i){if(i.hostname!==""){const s=new TypeError('File URL host must be "localhost" or empty on darwin');throw s.code="ERR_INVALID_FILE_URL_HOST",s}const u=i.pathname;let r=-1;for(;++r<u.length;)if(u.codePointAt(r)===37&&u.codePointAt(r+1)===50){const s=u.codePointAt(r+2);if(s===70||s===102){const o=new TypeError("File URL path must not include encoded / characters");throw o.code="ERR_INVALID_FILE_URL_PATH",o}}return decodeURIComponent(u)}const Ac=["history","path","basename","stem","extname","dirname"];class Up{constructor(u){let r;u?Zc(u)?r={path:u}:typeof u=="string"||hS(u)?r={value:u}:r=u:r={},this.cwd="cwd"in r?"":sS.cwd(),this.data={},this.history=[],this.messages=[],this.value,this.map,this.result,this.stored;let s=-1;for(;++s<Ac.length;){const f=Ac[s];f in r&&r[f]!==void 0&&r[f]!==null&&(this[f]=f==="history"?[...r[f]]:r[f])}let o;for(o in r)Ac.includes(o)||(this[o]=r[o])}get basename(){return typeof this.path=="string"?un.basename(this.path):void 0}set basename(u){Dc(u,"basename"),_c(u,"basename"),this.path=un.join(this.dirname||"",u)}get dirname(){return typeof this.path=="string"?un.dirname(this.path):void 0}set dirname(u){Km(this.basename,"dirname"),this.path=un.join(u||"",this.basename)}get extname(){return typeof this.path=="string"?un.extname(this.path):void 0}set extname(u){if(_c(u,"extname"),Km(this.dirname,"extname"),u){if(u.codePointAt(0)!==46)throw new Error("`extname` must start with `.`");if(u.includes(".",1))throw new Error("`extname` cannot contain multiple dots")}this.path=un.join(this.dirname,this.stem+(u||""))}get path(){return this.history[this.history.length-1]}set path(u){Zc(u)&&(u=oS(u)),Dc(u,"path"),this.path!==u&&this.history.push(u)}get stem(){return typeof this.path=="string"?un.basename(this.path,this.extname):void 0}set stem(u){Dc(u,"stem"),_c(u,"stem"),this.path=un.join(this.dirname||"",u+(this.extname||""))}fail(u,r,s){const o=this.message(u,r,s);throw o.fatal=!0,o}info(u,r,s){const o=this.message(u,r,s);return o.fatal=void 0,o}message(u,r,s){const o=new dt(u,r,s);return this.path&&(o.name=this.path+":"+o.name,o.file=this.path),o.fatal=!1,this.messages.push(o),o}toString(u){return this.value===void 0?"":typeof this.value=="string"?this.value:new TextDecoder(u||void 0).decode(this.value)}}function _c(i,u){if(i&&i.includes(un.sep))throw new Error("`"+u+"` cannot be a path: did not expect `"+un.sep+"`")}function Dc(i,u){if(!i)throw new Error("`"+u+"` cannot be empty")}function Km(i,u){if(!i)throw new Error("Setting `"+u+"` requires `path` to be set too")}function hS(i){return!!(i&&typeof i=="object"&&"byteLength"in i&&"byteOffset"in i)}const dS=(function(i){const s=this.constructor.prototype,o=s[i],f=function(){return o.apply(f,arguments)};return Object.setPrototypeOf(f,s),f}),mS={}.hasOwnProperty;class io extends dS{constructor(){super("copy"),this.Compiler=void 0,this.Parser=void 0,this.attachers=[],this.compiler=void 0,this.freezeIndex=-1,this.frozen=void 0,this.namespace={},this.parser=void 0,this.transformers=eS()}copy(){const u=new io;let r=-1;for(;++r<this.attachers.length;){const s=this.attachers[r];u.use(...s)}return u.data(Ec(!0,{},this.namespace)),u}data(u,r){return typeof u=="string"?arguments.length===2?(Cc("data",this.frozen),this.namespace[u]=r,this):mS.call(this.namespace,u)&&this.namespace[u]||void 0:u?(Cc("data",this.frozen),this.namespace=u,this):this.namespace}freeze(){if(this.frozen)return this;const u=this;for(;++this.freezeIndex<this.attachers.length;){const[r,...s]=this.attachers[this.freezeIndex];if(s[0]===!1)continue;s[0]===!0&&(s[0]=void 0);const o=r.call(u,...s);typeof o=="function"&&this.transformers.use(o)}return this.frozen=!0,this.freezeIndex=Number.POSITIVE_INFINITY,this}parse(u){this.freeze();const r=Zu(u),s=this.parser||this.Parser;return Oc("parse",s),s(String(r),r)}process(u,r){const s=this;return this.freeze(),Oc("process",this.parser||this.Parser),zc("process",this.compiler||this.Compiler),r?o(void 0,r):new Promise(o);function o(f,d){const p=Zu(u),b=s.parse(p);s.run(b,p,function(y,v,E){if(y||!v||!E)return m(y);const T=v,q=s.stringify(T,E);yS(q)?E.value=q:E.result=q,m(y,E)});function m(y,v){y||!v?d(y):f?f(v):r(void 0,v)}}}processSync(u){let r=!1,s;return this.freeze(),Oc("processSync",this.parser||this.Parser),zc("processSync",this.compiler||this.Compiler),this.process(u,o),Im("processSync","process",r),s;function o(f,d){r=!0,Qm(f),s=d}}run(u,r,s){Jm(u),this.freeze();const o=this.transformers;return!s&&typeof r=="function"&&(s=r,r=void 0),s?f(void 0,s):new Promise(f);function f(d,p){const b=Zu(r);o.run(u,b,m);function m(y,v,E){const T=v||u;y?p(y):d?d(T):s(void 0,T,E)}}}runSync(u,r){let s=!1,o;return this.run(u,r,f),Im("runSync","run",s),o;function f(d,p){Qm(d),o=p,s=!0}}stringify(u,r){this.freeze();const s=Zu(r),o=this.compiler||this.Compiler;return zc("stringify",o),Jm(u),o(u,s)}use(u,...r){const s=this.attachers,o=this.namespace;if(Cc("use",this.frozen),u!=null)if(typeof u=="function")b(u,r);else if(typeof u=="object")Array.isArray(u)?p(u):d(u);else throw new TypeError("Expected usable value, not `"+u+"`");return this;function f(m){if(typeof m=="function")b(m,[]);else if(typeof m=="object")if(Array.isArray(m)){const[y,...v]=m;b(y,v)}else d(m);else throw new TypeError("Expected usable value, not `"+m+"`")}function d(m){if(!("plugins"in m)&&!("settings"in m))throw new Error("Expected usable value but received an empty preset, which is probably a mistake: presets typically come with `plugins` and sometimes with `settings`, but this has neither");p(m.plugins),m.settings&&(o.settings=Ec(!0,o.settings,m.settings))}function p(m){let y=-1;if(m!=null)if(Array.isArray(m))for(;++y<m.length;){const v=m[y];f(v)}else throw new TypeError("Expected a list of plugins, not `"+m+"`")}function b(m,y){let v=-1,E=-1;for(;++v<s.length;)if(s[v][0]===m){E=v;break}if(E===-1)s.push([m,...y]);else if(y.length>0){let[T,...q]=y;const V=s[E][1];Gc(V)&&Gc(T)&&(T=Ec(!0,V,T)),s[E]=[m,T,...q]}}}}const pS=new io().freeze();function Oc(i,u){if(typeof u!="function")throw new TypeError("Cannot `"+i+"` without `parser`")}function zc(i,u){if(typeof u!="function")throw new TypeError("Cannot `"+i+"` without `compiler`")}function Cc(i,u){if(u)throw new Error("Cannot call `"+i+"` on a frozen processor.\nCreate a new processor first, by calling it: use `processor()` instead of `processor`.")}function Jm(i){if(!Gc(i)||typeof i.type!="string")throw new TypeError("Expected node, got `"+i+"`")}function Im(i,u,r){if(!r)throw new Error("`"+i+"` finished async. Use `"+u+"` instead")}function Zu(i){return gS(i)?i:new Up(i)}function gS(i){return!!(i&&typeof i=="object"&&"message"in i&&"messages"in i)}function yS(i){return typeof i=="string"||bS(i)}function bS(i){return!!(i&&typeof i=="object"&&"byteLength"in i&&"byteOffset"in i)}const vS="https://github.com/remarkjs/react-markdown/blob/main/changelog.md",Fm=[],Wm={allowDangerousHtml:!0},SS=/^(https?|ircs?|mailto|xmpp)$/i,TS=[{from:"astPlugins",id:"remove-buggy-html-in-markdown-parser"},{from:"allowDangerousHtml",id:"remove-buggy-html-in-markdown-parser"},{from:"allowNode",id:"replace-allownode-allowedtypes-and-disallowedtypes",to:"allowElement"},{from:"allowedTypes",id:"replace-allownode-allowedtypes-and-disallowedtypes",to:"allowedElements"},{from:"disallowedTypes",id:"replace-allownode-allowedtypes-and-disallowedtypes",to:"disallowedElements"},{from:"escapeHtml",id:"remove-buggy-html-in-markdown-parser"},{from:"includeElementIndex",id:"#remove-includeelementindex"},{from:"includeNodeIndex",id:"change-includenodeindex-to-includeelementindex"},{from:"linkTarget",id:"remove-linktarget"},{from:"plugins",id:"change-plugins-to-remarkplugins",to:"remarkPlugins"},{from:"rawSourcePos",id:"#remove-rawsourcepos"},{from:"renderers",id:"change-renderers-to-components",to:"components"},{from:"source",id:"change-source-to-children",to:"children"},{from:"sourcePos",id:"#remove-sourcepos"},{from:"transformImageUri",id:"#add-urltransform",to:"urlTransform"},{from:"transformLinkUri",id:"#add-urltransform",to:"urlTransform"}];function Yu(i){const u=xS(i),r=ES(i);return AS(u.runSync(u.parse(r),r),i)}function xS(i){const u=i.rehypePlugins||Fm,r=i.remarkPlugins||Fm,s=i.remarkRehypeOptions?{...i.remarkRehypeOptions,...Wm}:Wm;return pS().use(nv).use(r).use(Wv,s).use(u)}function ES(i){const u=i.children||"",r=new Up;return typeof u=="string"&&(r.value=u),r}function AS(i,u){const r=u.allowedElements,s=u.allowElement,o=u.components,f=u.disallowedElements,d=u.skipHtml,p=u.unwrapDisallowed,b=u.urlTransform||_S;for(const y of TS)Object.hasOwn(u,y.from)&&(""+y.from+(y.to?"use `"+y.to+"` instead":"remove it")+vS+y.id,void 0);return u.className&&(i={type:"element",tagName:"div",properties:{className:u.className},children:i.type==="root"?i.children:[i]}),Bp(i,m),B0(i,{Fragment:W.Fragment,components:o,ignoreInvalidStyle:!0,jsx:W.jsx,jsxs:W.jsxs,passKeys:!0,passNode:!0});function m(y,v,E){if(y.type==="raw"&&E&&typeof v=="number")return d?E.children.splice(v,1):E.children[v]={type:"text",value:y.value},v;if(y.type==="element"){let T;for(T in vc)if(Object.hasOwn(vc,T)&&Object.hasOwn(y.properties,T)){const q=y.properties[T],V=vc[T];(V===null||V.includes(y.tagName))&&(y.properties[T]=b(String(q||""),T,y))}}if(y.type==="element"){let T=r?!r.includes(y.tagName):f?f.includes(y.tagName):!1;if(!T&&s&&typeof v=="number"&&(T=!s(y,v,E)),T&&E&&typeof v=="number")return p&&y.children?E.children.splice(v,1,...y.children):E.children.splice(v,1),v}}}function _S(i){const u=i.indexOf(":"),r=i.indexOf("?"),s=i.indexOf("#"),o=i.indexOf("/");return u===-1||o!==-1&&u>o||r!==-1&&u>r||s!==-1&&u>s||SS.test(i.slice(0,u))?i:""}const DS="/WikiGLP/assets/cantoa_concept-CR3mD8_X.png",OS="/WikiGLP/assets/cantoa_front_side_back-CAqjHuO_.png",zS=`---
+`},o),f}function Wv(i,u){return i&&"run"in i?async function(r,s){const o=Vm(r,{file:s,...u});await i.run(o,s)}:function(r,s){return Vm(r,{file:s,...i||u})}}function Qm(i){if(i)throw i}var xc,Xm;function $v(){if(Xm)return xc;Xm=1;var i=Object.prototype.hasOwnProperty,u=Object.prototype.toString,r=Object.defineProperty,s=Object.getOwnPropertyDescriptor,o=function(m){return typeof Array.isArray=="function"?Array.isArray(m):u.call(m)==="[object Array]"},f=function(m){if(!m||u.call(m)!=="[object Object]")return!1;var y=i.call(m,"constructor"),v=m.constructor&&m.constructor.prototype&&i.call(m.constructor.prototype,"isPrototypeOf");if(m.constructor&&!y&&!v)return!1;var E;for(E in m);return typeof E>"u"||i.call(m,E)},d=function(m,y){r&&y.name==="__proto__"?r(m,y.name,{enumerable:!0,configurable:!0,value:y.newValue,writable:!0}):m[y.name]=y.newValue},p=function(m,y){if(y==="__proto__")if(i.call(m,y)){if(s)return s(m,y).value}else return;return m[y]};return xc=function b(){var m,y,v,E,T,q,V=arguments[0],I=1,j=arguments.length,le=!1;for(typeof V=="boolean"&&(le=V,V=arguments[1]||{},I=2),(V==null||typeof V!="object"&&typeof V!="function")&&(V={});I<j;++I)if(m=arguments[I],m!=null)for(y in m)v=p(V,y),E=p(m,y),V!==E&&(le&&E&&(f(E)||(T=o(E)))?(T?(T=!1,q=v&&o(v)?v:[]):q=v&&f(v)?v:{},d(V,{name:y,newValue:b(le,q,E)})):typeof E<"u"&&d(V,{name:y,newValue:E}));return V},xc}var Pv=$v();const Ec=tp(Pv);function Gc(i){if(typeof i!="object"||i===null)return!1;const u=Object.getPrototypeOf(i);return(u===null||u===Object.prototype||Object.getPrototypeOf(u)===null)&&!(Symbol.toStringTag in i)&&!(Symbol.iterator in i)}function eS(){const i=[],u={run:r,use:s};return u;function r(...o){let f=-1;const d=o.pop();if(typeof d!="function")throw new TypeError("Expected function as last argument, not "+d);p(null,...o);function p(b,...m){const y=i[++f];let v=-1;if(b){d(b);return}for(;++v<o.length;)(m[v]===null||m[v]===void 0)&&(m[v]=o[v]);o=m,y?tS(y,p)(...m):d(null,...m)}}function s(o){if(typeof o!="function")throw new TypeError("Expected `middelware` to be a function, not "+o);return i.push(o),u}}function tS(i,u){let r;return s;function s(...d){const p=i.length>d.length;let b;p&&d.push(o);try{b=i.apply(this,d)}catch(m){const y=m;if(p&&r)throw y;return o(y)}p||(b&&b.then&&typeof b.then=="function"?b.then(f,o):b instanceof Error?o(b):f(b))}function o(d,...p){r||(r=!0,u(d,...p))}function f(d){o(null,d)}}const un={basename:nS,dirname:lS,extname:iS,join:aS,sep:"/"};function nS(i,u){if(u!==void 0&&typeof u!="string")throw new TypeError('"ext" argument must be a string');Sa(i);let r=0,s=-1,o=i.length,f;if(u===void 0||u.length===0||u.length>i.length){for(;o--;)if(i.codePointAt(o)===47){if(f){r=o+1;break}}else s<0&&(f=!0,s=o+1);return s<0?"":i.slice(r,s)}if(u===i)return"";let d=-1,p=u.length-1;for(;o--;)if(i.codePointAt(o)===47){if(f){r=o+1;break}}else d<0&&(f=!0,d=o+1),p>-1&&(i.codePointAt(o)===u.codePointAt(p--)?p<0&&(s=o):(p=-1,s=d));return r===s?s=d:s<0&&(s=i.length),i.slice(r,s)}function lS(i){if(Sa(i),i.length===0)return".";let u=-1,r=i.length,s;for(;--r;)if(i.codePointAt(r)===47){if(s){u=r;break}}else s||(s=!0);return u<0?i.codePointAt(0)===47?"/":".":u===1&&i.codePointAt(0)===47?"//":i.slice(0,u)}function iS(i){Sa(i);let u=i.length,r=-1,s=0,o=-1,f=0,d;for(;u--;){const p=i.codePointAt(u);if(p===47){if(d){s=u+1;break}continue}r<0&&(d=!0,r=u+1),p===46?o<0?o=u:f!==1&&(f=1):o>-1&&(f=-1)}return o<0||r<0||f===0||f===1&&o===r-1&&o===s+1?"":i.slice(o,r)}function aS(...i){let u=-1,r;for(;++u<i.length;)Sa(i[u]),i[u]&&(r=r===void 0?i[u]:r+"/"+i[u]);return r===void 0?".":uS(r)}function uS(i){Sa(i);const u=i.codePointAt(0)===47;let r=rS(i,!u);return r.length===0&&!u&&(r="."),r.length>0&&i.codePointAt(i.length-1)===47&&(r+="/"),u?"/"+r:r}function rS(i,u){let r="",s=0,o=-1,f=0,d=-1,p,b;for(;++d<=i.length;){if(d<i.length)p=i.codePointAt(d);else{if(p===47)break;p=47}if(p===47){if(!(o===d-1||f===1))if(o!==d-1&&f===2){if(r.length<2||s!==2||r.codePointAt(r.length-1)!==46||r.codePointAt(r.length-2)!==46){if(r.length>2){if(b=r.lastIndexOf("/"),b!==r.length-1){b<0?(r="",s=0):(r=r.slice(0,b),s=r.length-1-r.lastIndexOf("/")),o=d,f=0;continue}}else if(r.length>0){r="",s=0,o=d,f=0;continue}}u&&(r=r.length>0?r+"/..":"..",s=2)}else r.length>0?r+="/"+i.slice(o+1,d):r=i.slice(o+1,d),s=d-o-1;o=d,f=0}else p===46&&f>-1?f++:f=-1}return r}function Sa(i){if(typeof i!="string")throw new TypeError("Path must be a string. Received "+JSON.stringify(i))}const sS={cwd:cS};function cS(){return"/"}function Zc(i){return!!(i!==null&&typeof i=="object"&&"href"in i&&i.href&&"protocol"in i&&i.protocol&&i.auth===void 0)}function oS(i){if(typeof i=="string")i=new URL(i);else if(!Zc(i)){const u=new TypeError('The "path" argument must be of type string or an instance of URL. Received `'+i+"`");throw u.code="ERR_INVALID_ARG_TYPE",u}if(i.protocol!=="file:"){const u=new TypeError("The URL must be of scheme file");throw u.code="ERR_INVALID_URL_SCHEME",u}return fS(i)}function fS(i){if(i.hostname!==""){const s=new TypeError('File URL host must be "localhost" or empty on darwin');throw s.code="ERR_INVALID_FILE_URL_HOST",s}const u=i.pathname;let r=-1;for(;++r<u.length;)if(u.codePointAt(r)===37&&u.codePointAt(r+1)===50){const s=u.codePointAt(r+2);if(s===70||s===102){const o=new TypeError("File URL path must not include encoded / characters");throw o.code="ERR_INVALID_FILE_URL_PATH",o}}return decodeURIComponent(u)}const Ac=["history","path","basename","stem","extname","dirname"];class Up{constructor(u){let r;u?Zc(u)?r={path:u}:typeof u=="string"||hS(u)?r={value:u}:r=u:r={},this.cwd="cwd"in r?"":sS.cwd(),this.data={},this.history=[],this.messages=[],this.value,this.map,this.result,this.stored;let s=-1;for(;++s<Ac.length;){const f=Ac[s];f in r&&r[f]!==void 0&&r[f]!==null&&(this[f]=f==="history"?[...r[f]]:r[f])}let o;for(o in r)Ac.includes(o)||(this[o]=r[o])}get basename(){return typeof this.path=="string"?un.basename(this.path):void 0}set basename(u){Dc(u,"basename"),_c(u,"basename"),this.path=un.join(this.dirname||"",u)}get dirname(){return typeof this.path=="string"?un.dirname(this.path):void 0}set dirname(u){Km(this.basename,"dirname"),this.path=un.join(u||"",this.basename)}get extname(){return typeof this.path=="string"?un.extname(this.path):void 0}set extname(u){if(_c(u,"extname"),Km(this.dirname,"extname"),u){if(u.codePointAt(0)!==46)throw new Error("`extname` must start with `.`");if(u.includes(".",1))throw new Error("`extname` cannot contain multiple dots")}this.path=un.join(this.dirname,this.stem+(u||""))}get path(){return this.history[this.history.length-1]}set path(u){Zc(u)&&(u=oS(u)),Dc(u,"path"),this.path!==u&&this.history.push(u)}get stem(){return typeof this.path=="string"?un.basename(this.path,this.extname):void 0}set stem(u){Dc(u,"stem"),_c(u,"stem"),this.path=un.join(this.dirname||"",u+(this.extname||""))}fail(u,r,s){const o=this.message(u,r,s);throw o.fatal=!0,o}info(u,r,s){const o=this.message(u,r,s);return o.fatal=void 0,o}message(u,r,s){const o=new dt(u,r,s);return this.path&&(o.name=this.path+":"+o.name,o.file=this.path),o.fatal=!1,this.messages.push(o),o}toString(u){return this.value===void 0?"":typeof this.value=="string"?this.value:new TextDecoder(u||void 0).decode(this.value)}}function _c(i,u){if(i&&i.includes(un.sep))throw new Error("`"+u+"` cannot be a path: did not expect `"+un.sep+"`")}function Dc(i,u){if(!i)throw new Error("`"+u+"` cannot be empty")}function Km(i,u){if(!i)throw new Error("Setting `"+u+"` requires `path` to be set too")}function hS(i){return!!(i&&typeof i=="object"&&"byteLength"in i&&"byteOffset"in i)}const dS=(function(i){const s=this.constructor.prototype,o=s[i],f=function(){return o.apply(f,arguments)};return Object.setPrototypeOf(f,s),f}),mS={}.hasOwnProperty;class io extends dS{constructor(){super("copy"),this.Compiler=void 0,this.Parser=void 0,this.attachers=[],this.compiler=void 0,this.freezeIndex=-1,this.frozen=void 0,this.namespace={},this.parser=void 0,this.transformers=eS()}copy(){const u=new io;let r=-1;for(;++r<this.attachers.length;){const s=this.attachers[r];u.use(...s)}return u.data(Ec(!0,{},this.namespace)),u}data(u,r){return typeof u=="string"?arguments.length===2?(Cc("data",this.frozen),this.namespace[u]=r,this):mS.call(this.namespace,u)&&this.namespace[u]||void 0:u?(Cc("data",this.frozen),this.namespace=u,this):this.namespace}freeze(){if(this.frozen)return this;const u=this;for(;++this.freezeIndex<this.attachers.length;){const[r,...s]=this.attachers[this.freezeIndex];if(s[0]===!1)continue;s[0]===!0&&(s[0]=void 0);const o=r.call(u,...s);typeof o=="function"&&this.transformers.use(o)}return this.frozen=!0,this.freezeIndex=Number.POSITIVE_INFINITY,this}parse(u){this.freeze();const r=Zu(u),s=this.parser||this.Parser;return Oc("parse",s),s(String(r),r)}process(u,r){const s=this;return this.freeze(),Oc("process",this.parser||this.Parser),zc("process",this.compiler||this.Compiler),r?o(void 0,r):new Promise(o);function o(f,d){const p=Zu(u),b=s.parse(p);s.run(b,p,function(y,v,E){if(y||!v||!E)return m(y);const T=v,q=s.stringify(T,E);yS(q)?E.value=q:E.result=q,m(y,E)});function m(y,v){y||!v?d(y):f?f(v):r(void 0,v)}}}processSync(u){let r=!1,s;return this.freeze(),Oc("processSync",this.parser||this.Parser),zc("processSync",this.compiler||this.Compiler),this.process(u,o),Im("processSync","process",r),s;function o(f,d){r=!0,Qm(f),s=d}}run(u,r,s){Jm(u),this.freeze();const o=this.transformers;return!s&&typeof r=="function"&&(s=r,r=void 0),s?f(void 0,s):new Promise(f);function f(d,p){const b=Zu(r);o.run(u,b,m);function m(y,v,E){const T=v||u;y?p(y):d?d(T):s(void 0,T,E)}}}runSync(u,r){let s=!1,o;return this.run(u,r,f),Im("runSync","run",s),o;function f(d,p){Qm(d),o=p,s=!0}}stringify(u,r){this.freeze();const s=Zu(r),o=this.compiler||this.Compiler;return zc("stringify",o),Jm(u),o(u,s)}use(u,...r){const s=this.attachers,o=this.namespace;if(Cc("use",this.frozen),u!=null)if(typeof u=="function")b(u,r);else if(typeof u=="object")Array.isArray(u)?p(u):d(u);else throw new TypeError("Expected usable value, not `"+u+"`");return this;function f(m){if(typeof m=="function")b(m,[]);else if(typeof m=="object")if(Array.isArray(m)){const[y,...v]=m;b(y,v)}else d(m);else throw new TypeError("Expected usable value, not `"+m+"`")}function d(m){if(!("plugins"in m)&&!("settings"in m))throw new Error("Expected usable value but received an empty preset, which is probably a mistake: presets typically come with `plugins` and sometimes with `settings`, but this has neither");p(m.plugins),m.settings&&(o.settings=Ec(!0,o.settings,m.settings))}function p(m){let y=-1;if(m!=null)if(Array.isArray(m))for(;++y<m.length;){const v=m[y];f(v)}else throw new TypeError("Expected a list of plugins, not `"+m+"`")}function b(m,y){let v=-1,E=-1;for(;++v<s.length;)if(s[v][0]===m){E=v;break}if(E===-1)s.push([m,...y]);else if(y.length>0){let[T,...q]=y;const V=s[E][1];Gc(V)&&Gc(T)&&(T=Ec(!0,V,T)),s[E]=[m,T,...q]}}}}const pS=new io().freeze();function Oc(i,u){if(typeof u!="function")throw new TypeError("Cannot `"+i+"` without `parser`")}function zc(i,u){if(typeof u!="function")throw new TypeError("Cannot `"+i+"` without `compiler`")}function Cc(i,u){if(u)throw new Error("Cannot call `"+i+"` on a frozen processor.\nCreate a new processor first, by calling it: use `processor()` instead of `processor`.")}function Jm(i){if(!Gc(i)||typeof i.type!="string")throw new TypeError("Expected node, got `"+i+"`")}function Im(i,u,r){if(!r)throw new Error("`"+i+"` finished async. Use `"+u+"` instead")}function Zu(i){return gS(i)?i:new Up(i)}function gS(i){return!!(i&&typeof i=="object"&&"message"in i&&"messages"in i)}function yS(i){return typeof i=="string"||bS(i)}function bS(i){return!!(i&&typeof i=="object"&&"byteLength"in i&&"byteOffset"in i)}const vS="https://github.com/remarkjs/react-markdown/blob/main/changelog.md",Fm=[],Wm={allowDangerousHtml:!0},SS=/^(https?|ircs?|mailto|xmpp)$/i,TS=[{from:"astPlugins",id:"remove-buggy-html-in-markdown-parser"},{from:"allowDangerousHtml",id:"remove-buggy-html-in-markdown-parser"},{from:"allowNode",id:"replace-allownode-allowedtypes-and-disallowedtypes",to:"allowElement"},{from:"allowedTypes",id:"replace-allownode-allowedtypes-and-disallowedtypes",to:"allowedElements"},{from:"disallowedTypes",id:"replace-allownode-allowedtypes-and-disallowedtypes",to:"disallowedElements"},{from:"escapeHtml",id:"remove-buggy-html-in-markdown-parser"},{from:"includeElementIndex",id:"#remove-includeelementindex"},{from:"includeNodeIndex",id:"change-includenodeindex-to-includeelementindex"},{from:"linkTarget",id:"remove-linktarget"},{from:"plugins",id:"change-plugins-to-remarkplugins",to:"remarkPlugins"},{from:"rawSourcePos",id:"#remove-rawsourcepos"},{from:"renderers",id:"change-renderers-to-components",to:"components"},{from:"source",id:"change-source-to-children",to:"children"},{from:"sourcePos",id:"#remove-sourcepos"},{from:"transformImageUri",id:"#add-urltransform",to:"urlTransform"},{from:"transformLinkUri",id:"#add-urltransform",to:"urlTransform"}];function Yu(i){const u=xS(i),r=ES(i);return AS(u.runSync(u.parse(r),r),i)}function xS(i){const u=i.rehypePlugins||Fm,r=i.remarkPlugins||Fm,s=i.remarkRehypeOptions?{...i.remarkRehypeOptions,...Wm}:Wm;return pS().use(nv).use(r).use(Wv,s).use(u)}function ES(i){const u=i.children||"",r=new Up;return typeof u=="string"&&(r.value=u),r}function AS(i,u){const r=u.allowedElements,s=u.allowElement,o=u.components,f=u.disallowedElements,d=u.skipHtml,p=u.unwrapDisallowed,b=u.urlTransform||_S;for(const y of TS)Object.hasOwn(u,y.from)&&(""+y.from+(y.to?"use `"+y.to+"` instead":"remove it")+vS+y.id,void 0);return u.className&&(i={type:"element",tagName:"div",properties:{className:u.className},children:i.type==="root"?i.children:[i]}),Bp(i,m),B0(i,{Fragment:W.Fragment,components:o,ignoreInvalidStyle:!0,jsx:W.jsx,jsxs:W.jsxs,passKeys:!0,passNode:!0});function m(y,v,E){if(y.type==="raw"&&E&&typeof v=="number")return d?E.children.splice(v,1):E.children[v]={type:"text",value:y.value},v;if(y.type==="element"){let T;for(T in vc)if(Object.hasOwn(vc,T)&&Object.hasOwn(y.properties,T)){const q=y.properties[T],V=vc[T];(V===null||V.includes(y.tagName))&&(y.properties[T]=b(String(q||""),T,y))}}if(y.type==="element"){let T=r?!r.includes(y.tagName):f?f.includes(y.tagName):!1;if(!T&&s&&typeof v=="number"&&(T=!s(y,v,E)),T&&E&&typeof v=="number")return p&&y.children?E.children.splice(v,1,...y.children):E.children.splice(v,1),v}}}function _S(i){const u=i.indexOf(":"),r=i.indexOf("?"),s=i.indexOf("#"),o=i.indexOf("/");return u===-1||o!==-1&&u>o||r!==-1&&u>r||s!==-1&&u>s||SS.test(i.slice(0,u))?i:""}const DS="/assets/cantoa_concept-CR3mD8_X.png",OS="/assets/cantoa_front_side_back-CAqjHuO_.png",zS=`---
 id: Index_creatures-index
 title: Creatures Index
 category: Index
-editedAt: 2026-01-03T12:58:11.576Z
+editedAt: 2026-01-03T13:44:49.304Z
 updatedAt: 2026-01-01T13:49:23.822Z
 createdAt: 2026-01-01T15:38:26.644Z
 ---
@@ -36,7 +36,7 @@ createdAt: 2026-01-01T15:38:26.644Z
 id: Index_home
 title: Home
 category: Index
-editedAt: 2026-01-03T12:58:11.578Z
+editedAt: 2026-01-03T13:44:49.620Z
 updatedAt: 2026-01-01T13:49:23.819Z
 createdAt: 2026-01-01T15:38:26.965Z
 ---
@@ -52,7 +52,7 @@ id: IDX_Template_01
 title: Index Template 01
 category: Index
 gallery:
-editedAt: 2026-01-03T12:58:11.580Z
+editedAt: 2026-01-03T13:44:49.621Z
 createdAt: 2026-01-02T07:05:33.968Z
 updatedAt: 2026-01-02T07:05:33.968Z
 ---
@@ -82,7 +82,7 @@ id: IDX_Template_02
 title: Index Template 02
 category: Index
 gallery:
-editedAt: 2026-01-03T12:58:11.582Z
+editedAt: 2026-01-03T13:44:49.623Z
 createdAt: 2026-01-02T07:05:33.972Z
 updatedAt: 2026-01-02T07:05:33.972Z
 ---
@@ -112,7 +112,7 @@ id: IDX_Template_03
 title: Index Template 03
 category: Index
 gallery:
-editedAt: 2026-01-03T12:58:11.583Z
+editedAt: 2026-01-03T13:44:49.625Z
 createdAt: 2026-01-02T07:05:33.983Z
 updatedAt: 2026-01-02T07:05:33.983Z
 ---
@@ -142,7 +142,7 @@ id: Creatures_cantoa
 title: Cantoa
 category: Creatures
 aliases: Cantoa
-editedAt: 2026-01-03T12:58:11.585Z
+editedAt: 2026-01-03T13:44:49.627Z
 updatedAt: 2026-01-01T14:32:42.049Z
 createdAt: 2026-01-01T14:32:42.049Z
 gallery:
@@ -256,7 +256,7 @@ id: CRE_Template_01
 title: Creature Template 01
 category: Creatures
 gallery:
-editedAt: 2026-01-03T12:58:11.588Z
+editedAt: 2026-01-03T13:44:49.630Z
 createdAt: 2026-01-02T07:05:33.987Z
 updatedAt: 2026-01-02T07:05:33.987Z
 ---
@@ -286,7 +286,7 @@ id: CRE_Template_02
 title: Creature Template 02
 category: Creatures
 gallery:
-editedAt: 2026-01-03T12:58:11.589Z
+editedAt: 2026-01-03T13:44:49.631Z
 createdAt: 2026-01-02T07:05:33.990Z
 updatedAt: 2026-01-02T07:05:33.990Z
 ---
@@ -316,7 +316,7 @@ id: CRE_Template_03
 title: Creature Template 03
 category: Creatures
 gallery:
-editedAt: 2026-01-03T12:58:11.592Z
+editedAt: 2026-01-03T13:44:49.633Z
 createdAt: 2026-01-02T07:05:33.992Z
 updatedAt: 2026-01-02T07:05:33.992Z
 ---
@@ -346,7 +346,7 @@ id: CLS_Template_01
 title: Class Template 01
 category: Classes
 gallery:
-editedAt: 2026-01-03T12:58:11.595Z
+editedAt: 2026-01-03T13:44:49.635Z
 createdAt: 2026-01-02T07:05:33.996Z
 updatedAt: 2026-01-02T07:05:33.996Z
 ---
@@ -376,7 +376,7 @@ id: CLS_Template_02
 title: Class Template 02
 category: Classes
 gallery:
-editedAt: 2026-01-03T12:58:11.597Z
+editedAt: 2026-01-03T13:44:49.644Z
 createdAt: 2026-01-02T07:05:34.000Z
 updatedAt: 2026-01-02T07:05:34.000Z
 ---
@@ -406,7 +406,7 @@ id: CLS_Template_03
 title: Class Template 03
 category: Classes
 gallery:
-editedAt: 2026-01-03T12:58:11.598Z
+editedAt: 2026-01-03T13:44:49.647Z
 createdAt: 2026-01-02T07:05:34.003Z
 updatedAt: 2026-01-02T07:05:34.003Z
 ---
@@ -436,7 +436,7 @@ id: ABL_Template_01
 title: Ability Template 01
 category: Abilities
 gallery:
-editedAt: 2026-01-03T12:58:11.599Z
+editedAt: 2026-01-03T13:44:49.649Z
 createdAt: 2026-01-02T07:05:34.005Z
 updatedAt: 2026-01-02T07:05:34.005Z
 ---
@@ -466,7 +466,7 @@ id: ABL_Template_02
 title: Ability Template 02
 category: Abilities
 gallery:
-editedAt: 2026-01-03T12:58:11.600Z
+editedAt: 2026-01-03T13:44:49.650Z
 createdAt: 2026-01-02T07:05:34.009Z
 updatedAt: 2026-01-02T07:05:34.009Z
 ---
@@ -496,7 +496,7 @@ id: ABL_Template_03
 title: Ability Template 03
 category: Abilities
 gallery:
-editedAt: 2026-01-03T12:58:11.602Z
+editedAt: 2026-01-03T13:44:49.652Z
 createdAt: 2026-01-02T07:05:34.011Z
 updatedAt: 2026-01-02T07:05:34.011Z
 ---
@@ -526,7 +526,7 @@ id: TRT_Template_01
 title: Trait Template 01
 category: Traits
 gallery:
-editedAt: 2026-01-03T12:58:11.604Z
+editedAt: 2026-01-03T13:44:49.654Z
 createdAt: 2026-01-02T07:05:34.014Z
 updatedAt: 2026-01-02T07:05:34.014Z
 ---
@@ -556,7 +556,7 @@ id: TRT_Template_02
 title: Trait Template 02
 category: Traits
 gallery:
-editedAt: 2026-01-03T12:58:11.605Z
+editedAt: 2026-01-03T13:44:49.656Z
 createdAt: 2026-01-02T07:05:34.016Z
 updatedAt: 2026-01-02T07:05:34.016Z
 ---
@@ -586,7 +586,7 @@ id: TRT_Template_03
 title: Trait Template 03
 category: Traits
 gallery:
-editedAt: 2026-01-03T12:58:11.607Z
+editedAt: 2026-01-03T13:44:49.665Z
 createdAt: 2026-01-02T07:05:34.073Z
 updatedAt: 2026-01-02T07:05:34.073Z
 ---
@@ -616,7 +616,7 @@ id: STA_Template_01
 title: Status Effect Template 01
 category: StatusEffects
 gallery:
-editedAt: 2026-01-03T12:58:11.608Z
+editedAt: 2026-01-03T13:44:49.667Z
 createdAt: 2026-01-02T07:05:34.098Z
 updatedAt: 2026-01-02T07:05:34.098Z
 ---
@@ -646,7 +646,7 @@ id: STA_Template_02
 title: Status Effect Template 02
 category: StatusEffects
 gallery:
-editedAt: 2026-01-03T12:58:11.609Z
+editedAt: 2026-01-03T13:44:49.669Z
 createdAt: 2026-01-02T07:05:34.101Z
 updatedAt: 2026-01-02T07:05:34.101Z
 ---
@@ -676,7 +676,7 @@ id: STA_Template_03
 title: Status Effect Template 03
 category: StatusEffects
 gallery:
-editedAt: 2026-01-03T12:58:11.611Z
+editedAt: 2026-01-03T13:44:49.670Z
 createdAt: 2026-01-02T07:05:34.104Z
 updatedAt: 2026-01-02T07:05:34.104Z
 ---
@@ -706,7 +706,7 @@ id: WRL_Template_01
 title: World Template 01
 category: World
 gallery:
-editedAt: 2026-01-03T12:58:11.614Z
+editedAt: 2026-01-03T13:44:49.672Z
 createdAt: 2026-01-02T07:05:34.117Z
 updatedAt: 2026-01-02T07:05:34.117Z
 ---
@@ -736,7 +736,7 @@ id: WRL_Template_02
 title: World Template 02
 category: World
 gallery:
-editedAt: 2026-01-03T12:58:11.615Z
+editedAt: 2026-01-03T13:44:49.674Z
 createdAt: 2026-01-02T07:05:34.133Z
 updatedAt: 2026-01-02T07:05:34.133Z
 ---
@@ -766,7 +766,7 @@ id: WRL_Template_03
 title: World Template 03
 category: World
 gallery:
-editedAt: 2026-01-03T12:58:11.616Z
+editedAt: 2026-01-03T13:44:49.675Z
 createdAt: 2026-01-02T07:05:34.135Z
 updatedAt: 2026-01-02T07:05:34.135Z
 ---
@@ -796,7 +796,7 @@ id: Systems_2d-3d-dual-mode-system
 title: 2D 3D Dual Mode System
 category: Systems
 aliases: Dual Mode System
-editedAt: 2026-01-03T12:58:11.617Z
+editedAt: 2026-01-03T13:44:49.685Z
 updatedAt: 2026-01-01T15:13:13.674Z
 createdAt: 2026-01-01T15:13:13.674Z
 ---
@@ -960,7 +960,7 @@ id: Systems_element_trait_system
 title: Element Trait System
 category: Systems
 aliases: Element Traits, Element Affinity, Element Imbue System, Element System
-editedAt: 2026-01-03T12:58:11.617Z
+editedAt: 2026-01-03T13:44:49.687Z
 updatedAt: 2026-01-01T15:38:13.674Z
 createdAt: 2026-01-01T15:38:13.674Z
 ---
@@ -1234,7 +1234,7 @@ id: SYS_Template_01
 title: System Template 01
 category: Systems
 gallery:
-editedAt: 2026-01-03T12:58:11.621Z
+editedAt: 2026-01-03T13:44:49.689Z
 createdAt: 2026-01-02T07:05:34.138Z
 updatedAt: 2026-01-02T07:05:34.138Z
 ---
@@ -1264,7 +1264,7 @@ id: SYS_Template_02
 title: System Template 02
 category: Systems
 gallery:
-editedAt: 2026-01-03T12:58:11.621Z
+editedAt: 2026-01-03T13:44:49.691Z
 createdAt: 2026-01-02T07:05:34.141Z
 updatedAt: 2026-01-02T07:05:34.141Z
 ---
@@ -1294,7 +1294,7 @@ id: SYS_Template_03
 title: System Template 03
 category: Systems
 gallery:
-editedAt: 2026-01-03T12:58:11.623Z
+editedAt: 2026-01-03T13:44:49.693Z
 createdAt: 2026-01-02T07:05:34.144Z
 updatedAt: 2026-01-02T07:05:34.144Z
 ---

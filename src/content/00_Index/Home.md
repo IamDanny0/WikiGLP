@@ -2,7 +2,7 @@
 id: Index_home
 title: Home
 category: Index
-editedAt: 2026-01-03T13:29:32.014Z
+editedAt: 2026-01-03T13:44:49.620Z
 updatedAt: 2026-01-01T13:49:23.819Z
 createdAt: 2026-01-01T15:38:26.965Z
 ---
