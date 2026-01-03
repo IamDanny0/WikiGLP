@@ -1,13 +1,13 @@
 import {
   isValidElement,
-  type HTMLAttributes,
+  type ReactElement,
   type ReactNode,
   useEffect,
   useMemo,
   useRef,
   useState,
 } from 'react'
-import ReactMarkdown from 'react-markdown'
+import ReactMarkdown, { type Components } from 'react-markdown'
 import './App.css'
 import { CATEGORIES, entriesByCategory, findEntry, lastEdited } from './wikiIndex'
 import { navigate, useRoute } from './router'
@@ -53,6 +53,9 @@ const LinkButton = ({
 )
 
 const extractText = (node: ReactNode): string => {
+  if (node === null || node === undefined || typeof node === 'boolean') {
+    return ''
+  }
   if (typeof node === 'string' || typeof node === 'number') {
     return String(node)
   }
@@ -60,7 +63,8 @@ const extractText = (node: ReactNode): string => {
     return node.map(extractText).join('')
   }
   if (isValidElement(node)) {
-    return extractText(node.props.children)
+    const element = node as ReactElement<{ children?: ReactNode }>
+    return extractText(element.props.children)
   }
   return ''
 }
@@ -184,8 +188,8 @@ function App() {
     slugCounts.set(base, count + 1)
     return count === 0 ? base : `${base}-${count}`
   }
-  const markdownComponents = {
-    h2: ({ children, ...props }: HTMLAttributes<HTMLHeadingElement> & { children: ReactNode }) => {
+  const markdownComponents: Components = {
+    h2: ({ children, ...props }) => {
       const id = getHeadingId(extractText(children))
       return (
         <h2 id={id} {...props}>
@@ -321,47 +325,47 @@ function App() {
             <div ref={contentRef}>
               {hasGalleryCard && generalContent ? (
                 <>
-                <div className="general-layout">
-                  <div className="markdown">
-                    <ReactMarkdown components={markdownComponents}>
-                      {generalContent.general}
-                    </ReactMarkdown>
+                  <div className="general-layout">
+                    <div className="markdown">
+                      <ReactMarkdown components={markdownComponents}>
+                        {generalContent.general}
+                      </ReactMarkdown>
+                    </div>
+                    <div className="gallery-card">
+                      <div className="gallery-title">Gallery</div>
+                      {hasGalleryImages ? (
+                        <div className="gallery-grid">
+                          {galleryImages.map((image, index) => (
+                            <button
+                              type="button"
+                              key={image}
+                              className="gallery-thumb"
+                              onClick={() => setLightboxIndex(index)}
+                            >
+                              <img src={image} alt={`${entry.title} ${index + 1}`} />
+                            </button>
+                          ))}
+                        </div>
+                      ) : (
+                        <div className="gallery-empty">Keine Bilder verfügbar</div>
+                      )}
+                    </div>
                   </div>
-                  <div className="gallery-card">
-                    <div className="gallery-title">Gallery</div>
-                    {hasGalleryImages ? (
-                      <div className="gallery-grid">
-                        {galleryImages.map((image, index) => (
-                          <button
-                            type="button"
-                            key={image}
-                            className="gallery-thumb"
-                            onClick={() => setLightboxIndex(index)}
-                          >
-                            <img src={image} alt={`${entry.title} ${index + 1}`} />
-                          </button>
-                        ))}
-                      </div>
-                    ) : (
-                      <div className="gallery-empty">Keine Bilder verfügbar</div>
-                    )}
-                  </div>
-                </div>
-                {generalContent.rest && (
-                  <article className="markdown">
-                    <ReactMarkdown components={markdownComponents}>
-                      {generalContent.rest}
-                    </ReactMarkdown>
-                  </article>
-                )}
+                  {generalContent.rest && (
+                    <article className="markdown">
+                      <ReactMarkdown components={markdownComponents}>
+                        {generalContent.rest}
+                      </ReactMarkdown>
+                    </article>
+                  )}
                 </>
               ) : (
-              <article className="markdown">
-                <ReactMarkdown components={markdownComponents}>
-                  {entry.content}
-                </ReactMarkdown>
-              </article>
-            )}
+                <article className="markdown">
+                  <ReactMarkdown components={markdownComponents}>
+                    {entry.content}
+                  </ReactMarkdown>
+                </article>
+              )}
             </div>
           </section>
         )}

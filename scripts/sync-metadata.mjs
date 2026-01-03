@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url'
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url))
 const viewerRoot = path.resolve(scriptDir, '..')
-const gameCodexRoot = path.resolve(viewerRoot, '..')
+const contentRoot = path.resolve(viewerRoot, 'src', 'content')
 
 const categoryMap = new Map([
   ['00_Index', 'Index'],
@@ -16,8 +16,6 @@ const categoryMap = new Map([
   ['06_World', 'World'],
   ['07_Systems', 'Systems'],
 ])
-
-const EXCLUDE_DIRS = new Set(['viewer', 'assets', 'node_modules', '.git'])
 
 const toSlug = (filename) =>
   filename
@@ -65,7 +63,7 @@ const ensureFrontmatter = (filePath) => {
   const stat = fs.statSync(filePath)
   const editedAt = stat.mtime.toISOString()
 
-  const relative = path.relative(gameCodexRoot, filePath)
+  const relative = path.relative(contentRoot, filePath)
   const parts = relative.split(path.sep)
   const categoryFolder = parts[0]
   const filename = parts[parts.length - 1]
@@ -119,7 +117,6 @@ const walk = (dir) => {
   entries.forEach((entry) => {
     const fullPath = path.join(dir, entry.name)
     if (entry.isDirectory()) {
-      if (EXCLUDE_DIRS.has(entry.name)) return
       walk(fullPath)
       return
     }
@@ -129,4 +126,4 @@ const walk = (dir) => {
   })
 }
 
-walk(gameCodexRoot)
+walk(contentRoot)

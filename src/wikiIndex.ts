@@ -99,7 +99,7 @@ const stripLeadingTitle = (content: string, title: string) => {
 const loadEntries = (): WikiEntry[] => {
   const entries: WikiEntry[] = []
   const creatureImages = import.meta.glob<string>(
-    '../../01_Creatures/*.{png,jpg,jpeg,webp}',
+    './content/01_Creatures/*.{png,jpg,jpeg,webp}',
     {
       query: '?url',
       import: 'default',
@@ -116,7 +116,7 @@ const loadEntries = (): WikiEntry[] => {
   const sets: Array<[CategoryDef, Record<string, string>]> = [
     [
       CATEGORIES[0],
-      import.meta.glob<string>('../../00_Index/*.md', {
+      import.meta.glob<string>('./content/00_Index/*.md', {
         query: '?raw',
         import: 'default',
         eager: true,
@@ -124,7 +124,7 @@ const loadEntries = (): WikiEntry[] => {
     ],
     [
       CATEGORIES[1],
-      import.meta.glob<string>('../../01_Creatures/*.md', {
+      import.meta.glob<string>('./content/01_Creatures/*.md', {
         query: '?raw',
         import: 'default',
         eager: true,
@@ -132,7 +132,7 @@ const loadEntries = (): WikiEntry[] => {
     ],
     [
       CATEGORIES[2],
-      import.meta.glob<string>('../../02_Classes/*.md', {
+      import.meta.glob<string>('./content/02_Classes/*.md', {
         query: '?raw',
         import: 'default',
         eager: true,
@@ -140,7 +140,7 @@ const loadEntries = (): WikiEntry[] => {
     ],
     [
       CATEGORIES[3],
-      import.meta.glob<string>('../../03_Abilities/*.md', {
+      import.meta.glob<string>('./content/03_Abilities/*.md', {
         query: '?raw',
         import: 'default',
         eager: true,
@@ -148,7 +148,7 @@ const loadEntries = (): WikiEntry[] => {
     ],
     [
       CATEGORIES[4],
-      import.meta.glob<string>('../../04_Traits/*.md', {
+      import.meta.glob<string>('./content/04_Traits/*.md', {
         query: '?raw',
         import: 'default',
         eager: true,
@@ -156,7 +156,7 @@ const loadEntries = (): WikiEntry[] => {
     ],
     [
       CATEGORIES[5],
-      import.meta.glob<string>('../../05_StatusEffects/*.md', {
+      import.meta.glob<string>('./content/05_StatusEffects/*.md', {
         query: '?raw',
         import: 'default',
         eager: true,
@@ -164,7 +164,7 @@ const loadEntries = (): WikiEntry[] => {
     ],
     [
       CATEGORIES[6],
-      import.meta.glob<string>('../../06_World/*.md', {
+      import.meta.glob<string>('./content/06_World/*.md', {
         query: '?raw',
         import: 'default',
         eager: true,
@@ -172,7 +172,7 @@ const loadEntries = (): WikiEntry[] => {
     ],
     [
       CATEGORIES[7],
-      import.meta.glob<string>('../../07_Systems/*.md', {
+      import.meta.glob<string>('./content/07_Systems/*.md', {
         query: '?raw',
         import: 'default',
         eager: true,
