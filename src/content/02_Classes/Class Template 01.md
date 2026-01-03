@@ -3,7 +3,7 @@ id: CLS_Template_01
 title: Class Template 01
 category: Classes
 gallery:
-editedAt: 2026-01-03T12:35:06.270Z
+editedAt: 2026-01-03T12:38:22.823Z
 createdAt: 2026-01-02T07:05:33.996Z
 updatedAt: 2026-01-02T07:05:33.996Z
 ---
