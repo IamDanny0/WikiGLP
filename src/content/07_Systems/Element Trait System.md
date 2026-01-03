@@ -3,7 +3,7 @@ id: Systems_element_trait_system
 title: Element Trait System
 category: Systems
 aliases: Element Traits, Element Affinity, Element Imbue System, Element System
-editedAt: 2026-01-03T12:27:37.857Z
+editedAt: 2026-01-03T12:35:06.322Z
 updatedAt: 2026-01-01T15:38:13.674Z
 createdAt: 2026-01-01T15:38:13.674Z
 ---

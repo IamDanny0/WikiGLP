@@ -3,7 +3,7 @@ id: IDX_Template_01
 title: Index Template 01
 category: Index
 gallery:
-editedAt: 2026-01-03T12:27:37.814Z
+editedAt: 2026-01-03T12:35:06.259Z
 createdAt: 2026-01-02T07:05:33.968Z
 updatedAt: 2026-01-02T07:05:33.968Z
 ---
